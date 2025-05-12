@@ -26,3 +26,4 @@ One line per active dev day.
 - 2025-05-07: iteration 23 - QA and integration
 - 2025-05-08: iteration 24 - QA and integration
 - 2025-05-09: iteration 25 - QA and integration
+- 2025-05-12: iteration 26 - QA and integration
