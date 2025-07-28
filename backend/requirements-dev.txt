@@ -1,0 +1,4 @@
+-r requirements.txt
+pytest>=8
+greenlet>=3.0
+bcrypt==4.2.1
