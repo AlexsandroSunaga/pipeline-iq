@@ -26,6 +26,16 @@ http://localhost:3013
 
 Public pages (`/`, `/features`, `/solutions`, `/integrations`, `/docs`, `/status`, `/trust`, `/catalog`) are served by the same web app.
 
+## Tech stack
+
+| Area | Technologies |
+|------|--------------|
+| Frontend | `React`, `TypeScript`, `Vite`, `Ant Design Pro Components`, `Tailwind CSS`, `Zustand`, `React Router` |
+| Backend | `Python`, `FastAPI`, `pandas`, `Pydantic Settings` |
+| Database | `SQLAlchemy (async)`, `SQLite (aiosqlite)` |
+| Auth | `JWT (python-jose)`, `passlib`, `bcrypt` |
+| DevOps and tooling | `Docker`, `pytest`, `oxlint` |
+
 ## Run
 
 Setup (once):
