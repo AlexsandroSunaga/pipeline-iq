@@ -4,7 +4,7 @@ import { api } from "@/api/client";
 
 export default function Page() {
   const [rows, setRows] = useState<any[]>([]);
-  useEffect(() => { api("/schedules").then(setRows); }, []);
+  useEffect(() => { api<any[]>("/schedules").then(setRows); }, []);
   return (
     <div>
       <h1 className="text-2xl font-semibold">Job schedules</h1>

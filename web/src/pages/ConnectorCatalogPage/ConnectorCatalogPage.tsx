@@ -1,4 +1,3 @@
-import { Badge, Card, SimpleGrid, Text, Title } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { MarketingLayout } from "@/components/MarketingLayout";
 import { api } from "@/api/client";
@@ -13,19 +12,21 @@ export default function ConnectorCatalogPage() {
 
   return (
     <MarketingLayout>
-      <Title order={2}>Connector catalog</Title>
-      <Text c="dimmed" mt="xs">Airbyte-style source/destination metadata for sales demos.</Text>
-      <SimpleGrid cols={{ base: 1, sm: 2, md: 3 }} mt="lg">
+      <h2 className="text-2xl font-semibold">Connector catalog</h2>
+      <p className="mt-2 text-sm text-slate-500">Airbyte-style source/destination metadata for sales demos.</p>
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((c) => (
-          <Card key={c.code} withBorder padding="md">
-            <Text fw={600}>{c.name}</Text>
-            <Text size="sm" c="dimmed">{c.code} · {c.type}</Text>
-            <Badge mt="sm" variant="light">{c.streams} streams</Badge>
-            {c.cdc ? <Badge ml="xs" color="green">CDC</Badge> : null}
-            {c.destination ? <Badge ml="xs" color="violet">destination</Badge> : null}
-          </Card>
+          <div key={c.code} className="rounded-xl border border-slate-700 p-4">
+            <p className="font-semibold">{c.name}</p>
+            <p className="text-sm text-slate-500">{c.code} · {c.type}</p>
+            <div className="mt-3 flex flex-wrap gap-2 text-xs">
+              <span className="rounded-full bg-slate-800 px-2 py-0.5 text-slate-300">{c.streams} streams</span>
+              {c.cdc ? <span className="rounded-full bg-green-900/40 px-2 py-0.5 text-green-300">CDC</span> : null}
+              {c.destination ? <span className="rounded-full bg-violet-900/40 px-2 py-0.5 text-violet-300">destination</span> : null}
+            </div>
+          </div>
         ))}
-      </SimpleGrid>
+      </div>
     </MarketingLayout>
   );
 }

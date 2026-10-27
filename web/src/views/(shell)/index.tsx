@@ -49,7 +49,7 @@ export default function Dashboard() {
               >
                 Run job
               </button>
-              <a to={exportUrl(c.id)} className="rounded-lg border border-slate-700 px-3 py-1.5 text-sm text-slate-300">
+              <a href={exportUrl(c.id)} className="rounded-lg border border-slate-700 px-3 py-1.5 text-sm text-slate-300">
                 Export CSV
               </a>
             </div>

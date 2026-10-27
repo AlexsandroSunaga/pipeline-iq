@@ -4,7 +4,7 @@ import { api } from "@/api/client";
 
 export default function Page() {
   const [rows, setRows] = useState<any[]>([]);
-  useEffect(() => { api("/quality/issues").then(setRows); }, []);
+  useEffect(() => { api<any[]>("/quality/issues").then(setRows); }, []);
   return (
     <div>
       <h1 className="text-2xl font-semibold">Data quality governance</h1>
