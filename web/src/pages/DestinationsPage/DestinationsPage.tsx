@@ -18,7 +18,7 @@ export default function DestinationsPage() {
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold text-white">Destinations</h1>
-      <p className="text-slate-400">Webhook and warehouse targets (Airbyte-style portfolio demo).</p>
+      <p className="text-slate-400">Sample webhook and warehouse targets.</p>
       <Card className="bg-slate-900 border-slate-700">
         <div className="flex flex-wrap gap-2">
           <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" />
